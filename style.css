@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    margin: 0%;
+    overflow-y: hidden;
+    padding: 0%;
+}
+
+:root {
+    font-family: 'Inter', sans-serif;
+    margin: 0%;
+    --grey: hsl(0, 0%, 100%);
+}
+
+header {
+    text-align: center;
+    line-height: 20vh;
+    height: 20vh;
+    margin: 0%;
+    background-color: #4D68FF;
+    color: white;
+    font-size: 20px;
+    border-bottom: 3px solid black;
+}
+
+.stroke {
+    color: white;
+    text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+    -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;  
+}
+
+.scrollable {
+    overflow-y: auto;
+    display: block;
+}
+
+main {
+    height: 80vh;
+    width: 75%;
+}
+
+.split {
+    display: flex;
+}
+
+.side-menu {
+    height: 80vh;
+    border-left: 3px solid black;
+    padding-left: 2%;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    width: 90%;
+    margin-top: 3%;
+    border: 1px solid black;
+}
+
+select {
+    border: 3px solid black;
+    border-radius: 0;
+    padding: 10px 20px 10px 5px;
+    outline: none;
+}
+
+.top-income{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 200px;
+}
+
+.container-income{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#month-income {
+    margin-top: 0;
+}
+
+.income {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+.spending {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.bills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+.bills input {
+    border: 3px solid black;
+    padding: 10px 20px;
+}
+
+.unexpected {
+    margin-left: 5%;
+    height: 50%;
+    margin-right: 5%;
+}
+
+.unexpected button {
+    background-color: var(--grey);
+    border: 3px solid black;
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: 1.25em;
+    cursor: pointer;
+}
+
+.unexpected button:hover {
+    background-color: rgb(213, 213, 213);
+}
+
+.unexpected table {
+    background-color: var(--grey);
+    border: 1px solid black;
+    padding: 0;
+    border-spacing: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 80%;
+    display: block;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: stretch;
+    max-height: 50%;
+}
+
+.unexpected table td {
+    border: 2px solid black;
+    margin: 0px;
+    text-align: center;
+    width: 50%;
+}
+
+.unexpected table tr{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-menu section{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.side-menu section :last-child{
+    font-weight: bold;
+}
+
+#gross-monthly-income {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 830px) {
+    .split {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .side-menu {
+        height: 20vh;
+        overflow-y: auto;
+        width: 100vw;
+        padding: 0;
+        border-left: none;
+        border-bottom: 3px solid black;
+    }
+
+    .side-menu #display-bills,
+    .side-menu .after-tax,
+    .side-menu #net-monthly {
+        padding: 0 20px;
+    }
+
+    main {
+        width: 100vw;
+    }
+
+    main section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-income {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .taxes-table h3 {
+        text-align: center;
+    }
+
+    .bills {
+        justify-content: space-evenly;
+    }
+
+    .unexpected {
+        height: 600px;
+    }
+
+    .unexpected table {
+        height: 200px;
+    }
+}

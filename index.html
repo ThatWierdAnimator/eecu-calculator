@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="calcylator.jpg" type="image/x-icon">
+    <script src="script.js" defer></script>
+    <script src="jobs.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="stroke">Budget Calculator</h1>
+    </header>
+    <div class="split">
+        <main class="scrollable">
+            <section class="income">
+                <h2>
+                    Income
+                </h2>
+                <div class="container-income">
+                    <div class="top-income">
+                        <select name="blank" id="occupation">
+                            <!-- where the jobs go -->
+                        </select>
+                    </div>
+                    <div class="taxes-table">
+                        <h3 id="gross-monthly-income">Monthly Income: $5,271</h3>
+                        <table id="taxes-table">
+                            <tr>
+                                <td>-12% (Federal Taxes)</td>
+                                <td>$632</td>
+                            </tr>
+                            <tr>
+                                <td>-7% (State Taxes)</td>
+                                <td>$369</td>
+                            </tr>
+                            <tr>
+                                <td>-6.2% (Social Security)</td>
+                                <td>$327</td>
+                            </tr>
+                            <tr>
+                                <td>-1.45% (Medicare)</td>
+                                <td>$76</td>
+                            </tr>
+                            <tr>
+                                <td>-1% (State Disability)</td>
+                                <td>$53</td>
+                            </tr>
+                            <tr>
+                                <td>-5% (Retirement Investment)</td>
+                                <td>$264</td>
+                            </tr>
+                            <tr>
+                                <td>-180$ (Medical Insurance)</td>
+                                <td>$180</td>
+                            </tr>
+                        </table>
+                        <h3 id="net-monthly-income">Monthly Income After Tax: $3,370</h3>
+                    </div>
+                </div>
+
+
+                <hr>
+            </section>
+            <section class="spending">
+                <h2>Spending</h2>
+                <div class="bills" id="bills">
+                    <input type="number" placeholder="Savings" id="savings" min="0">
+                    <input type="number" placeholder="Education" id="education" min="0">
+                    <input type="number" placeholder="Housing" id="housing" min="0">
+                    <input type="number" placeholder="Utilities" id="utilities" min="0">
+                    <input type="number" placeholder="Transportation" id="transportation" min="0">
+                    <input type="number" placeholder="Food" id="food" min="0">
+                    <input type="number" placeholder="Clothing" id="clothing" min="0">
+                    <input type="number" placeholder="Media" id="media" min="0">
+                    <input type="number" placeholder="Entertainment" id="entertainment" min="0">
+                    <input type="number" placeholder="Other" id="other" min="0">
+                </div>
+                <hr class="stupid-head">
+            </section>
+            <section class="unexpected">
+                <h2>Unexpected Section</h2>
+                <button id="random">Random Event</button>
+                <table class="scrollable" id="event-log">
+                    <tr>
+                        <td>Description</td>
+                        <td>Effect</td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+        <section class="side-menu">
+            <h3 class="after-tax">
+                Monthly Income After Tax:
+            </h3>
+            <p id="net-monthly">
+                $3,370
+            </p>
+            <div id="display-bills">
+                <section>
+                    <p>
+                        Savings:
+                    </p>
+                    <p>
+                        $0
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Education:
+                    </p>
+                    <p>
+                        $0
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Housing:
+                    </p>
+                    <p>
+                        $0
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Utilities:
+                    </p>
+                    <p>
+                        $0
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Transportation:
+                    </p>
+                    <p>
+                        $0
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Food:
+                    </p>
+                    <p>
+                        $0
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Clothing:
+                    </p>
+                    <p>
+                        $0
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Media:
+                    </p>
+                    <p>
+                        $0
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Entertainment:
+                    </p>
+                    <p>
+                        $0
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Other:
+                    </p>
+                    <p>
+                        $0
+                    </p>
+                </section>
+                <h3 id="leftovers">
+                    Leftovers: $3,370
+                </h3>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
