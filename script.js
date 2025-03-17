@@ -34,7 +34,7 @@ const events = [
     {description: "Friggin' packet yo", effectDesc: 'return to penny', effect: (n) => -n + 0.01},
     {description: "Wallet stole", effectDesc: '-0 to 300', effect: (n) => -Math.round(Math.random() * 300)},
     {description: "Heist", effectDesc: '+0 to 10000000', effect: (n) => Math.round(Math.random() * 10000000)},
-    {description: "Bowser space", effectDesc: 'If poor, add a zero. If rich, money becomes negative.', effect: (n) => (n > 1000000) ? -n*2 : n*9},
+    {description: "Bowser space", effectDesc: 'If poor, add a zero. If rich, money becomes negative.', effect: (n) => (n > 1000000) ? -n*2 : Math.floor(n)*9},
     {description: "Poor jackpot", effectDesc: 'If broke, gain 2 billion dollars', effect: (n) => (n === 0) ? 2000000000 : 0},
     {description: "Newton doesn't discover gravity", effectDesc: 'Flip cent and dollar amounts', effect: (n) => -n + (n % 1) * 100 + (Math.floor(n) / (10 ** n.toString().length))},
     {description: "Obtain sugar mommy", effectDesc: 'Happiness :)', effect: (n) => Infinity},
